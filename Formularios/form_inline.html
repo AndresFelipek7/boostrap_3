@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>formulario en linea</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<!--La clase sr-only nos sirve para ocultar el label cuando acenta el placeholder de lo contrario muestra el label en dispositivos de lectura
+	input-group = Para colocar los input una la lado de otro
+	input-group-addon = Coloca el elemento seguido de un input-->
+
+	<div class="container">
+		<br>
+		<form action="" method="" class="form-inline">
+			<div class="form-group">
+				<label
+				class="sr-only" for="nombre">Nombre:</label>
+				<input class="form-control" id="nombre" type="text" placeholder="Nombre:">
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<label class="sr-only" for="correo">Correo:</label>
+					<div class="input-group-addon">@</div>
+					<input  class="form-control" type="text" id="correo" placeholder="Correo:">
+				</div>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="" id="">Recuerdame
+				</label>
+			</div>
+
+			<button class="btn btn-primary">Enviar</button>
+		</form>
+	</div>
+<script src="bootstrap.min.js"></script>
+<script src="Jquery-1.12.3.js"></script>
+</body>
+</html>

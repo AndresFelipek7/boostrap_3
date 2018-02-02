@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Acordeon</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<br>
+		<a href="#seccion" data-toggle="collapse" class="btn btn-primary">Mostrar / Ocultar</a>
+		<div class="collapse" id="seccion">
+			<br>
+			<div class="well">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas omnis fuga, aperiam.</p>
+			</div>
+		</div>
+		<br><br>
+		<!--Acordion de Boostrap-->
+		<div class="panel-group" id="acordion" role="tablist">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="heading1">
+					<h4 class="panel-title">
+						<a href="#collapse1" data-toggle="collapse" data-parent="#acordion">
+							<label>Encabezado #1</label>
+						</a>
+					</h4>
+				</div>
+
+				<div id="collapse1" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati distinctio enim magni vero, voluptas provident?</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="heading2">
+					<h4 class="panel-title">
+						<a href="#collapse2" data-toggle="collapse" data-parent="#acordion">
+							<label>Encabezado #2</label>
+						</a>
+					</h4>
+				</div>
+
+				<div id="collapse2" class="panel-collapse collapse">
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati distinctio enim magni vero, voluptas provident?</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="heading3">
+					<h4 class="panel-title">
+						<a href="#collapse3" data-toggle="collapse" data-parent="#acordion">
+							<label>Encabezado #3</label>
+						</a>
+					</h4>
+				</div>
+
+				<div id="collapse3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati distinctio enim magni vero, voluptas provident?</p>
+					</div>
+				</div>
+			</div>
+
+			<div class='panel panel-warning text-center'>
+				<div class='panel-heading' role='tab' id='headingTwo'>
+					<h4 class='panel-title'>
+						<a class='collapsed' role='button' data-toggle='collapse' data-parent='#accordion' href='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo'>
+							<span class="glyphicon glyphicon-signal"> Interrogatorio </span>
+						</a>
+					</h4>
+				</div>
+				<div id='collapseTwo' class='panel-collapse collapse' role='tabpanel' aria-labelledby='headingTwo'>
+					<div class='panel-body'>
+						<form action='registro_Evaluacion.php' method='post' class='formulario' name="f_evaluacion">
+							<button type="button" class="btn btn-md btn-primary" id="ayuda_interrogatorio" data-toggle="tooltip" data-placement="right" title="En este Menu es necesario saber las horas que el conductor indique en cada caso"><span class="glyphicon glyphicon-info-sign"></span></button>
+							<h4>Informacion en Horas</h4>
+							<h4 style='color: red;'>Campo Obligatorio *</h4>
+							<button type="reset" class="btn btn-warning" onclick="ocultar_campos_nuevos_destino();"> <span class="glyphicon glyphicon-remove"></span> Limpiar Valores</button>
+							<hr>
+							<label>Origen = </label> <input type="text" class="text-center" value="Bogotá" readonly>
+							<label style='color:red;'>*</label>
+
+							<?php 
+								include 'library/listas dinamicas/lista_Dinamica_destino.php'; 
+							?>
+
+							<div id="contenedor_distancia_tiempo">
+								
+							</div>
+							<hr>
+							<button type="button" class="btn btn-xs btn-primary" id="ayuda_interrogatorio_descanso" data-toggle="tooltip" data-placement="top" title="Descanso inactivo consiste en las horas despues de conducir o de su jornada laboral"><span class="glyphicon glyphicon-info-sign"></span></button>
+							<label style='color:red;'>*</label> <label>Descanso | Inactivo = </label>
+								<select name='descanso' id="hora_descanso">
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+									<option value='6'>6</option>
+									<option value='7'>7</option>
+									<option value='8'>8</option>
+									<option value='9'>9</option>
+									<option value='10'>10</option>
+									<option value='11'>11</option>
+									<option value='12'>12</option>
+								</select>
+							
+							<div id="camarote" style="display:none;">
+								<button type="button" id="ayuda_camarote" class="btn btn-xs btn-primary" id="ayuda_interrogatorio_camarote" data-toggle="tooltip" data-placement="top" title="Camarote son las horas que descansa cuando el destino supera las 8 horas de recorrido"><span class="glyphicon glyphicon-info-sign"></span></button>
+								<label style='color:red;'>*</label> <label>Camarote = </label>
+								<select name='camarote' id="hora_camarote">
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+									<option value='6'>6</option>
+									<option value='7'>7</option>
+									<option value='8'>8</option>
+									<option value='9'>9</option>
+									<option value='10'>10</option>
+									<option value='11'>11</option>
+									<option value='12'>12</option>
+								</select>
+							</div>
+
+							<button type="button" class="btn btn-xs btn-primary" id="ayuda_interrogatorio_conduciendo" data-toggle="tooltip" data-placement="top" title="Horas conduciendo significa las horas que lleva detras del volante"><span class="glyphicon glyphicon-info-sign"></span></button>
+							<label style='color:red;'>*</label> <label>Conduciendo = </label>
+								<select name='conduciendo' id="hora_conduciendo" onclick="horas_permitidas();">
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+									<option value='6'>6</option>
+									<option value='7'>7</option>
+									<option value='8'>8</option>
+									<option value='9'>9</option>
+									<option value='10'>10</option>
+									<option value='11'>11</option>
+									<option value='12'>12</option>
+									<option value='13'>13</option>
+									<option value='14'>14</option>
+									<option value='15'>15</option>
+									<option value='16'>16</option>
+									<option value='17'>17</option>
+									<option value='18'>18</option>
+									<option value='19'>19</option>
+									<option value='20'>20</option>
+									<option value='21'>21</option>
+								</select>
+							<div class="contenedor_otra_actividad">
+								<input type="checkbox" name="actividad" id="otra_actividad_checkbox"  onclick="mostrar_otra_actividad();">
+								<label for="otra_actividad_checkbox"> Otra Actividad</label>
+							</div>
+							
+							<div id="contenedor_o_actividad" style="display:none;">
+								<label>Cuantas Horas = </label>
+								<select name="otra_actividad" id="otra_actividad" onclick="horas_permitidas();">
+									<option value='0'>0</option>
+									<option value='1'>1</option>
+									<option value='2'>2</option>
+									<option value='3'>3</option>
+									<option value='4'>4</option>
+									<option value='5'>5</option>
+									<option value='6'>6</option>
+									<option value='7'>7</option>
+									<option value='8'>8</option>
+									<option value='9'>9</option>
+									<option value='10'>10</option>
+									<option value='11'>11</option>
+									<option value='12'>12</option>
+								</select><br><br>
+								<label>Cuales Actividades?</label><br><br>
+								<textarea name="cual_actividad" cols="60" rows="5" onkeypress='return soloLetras(event)'></textarea>
+							</div>
+								
+							<hr>
+							<button type="button" class="btn btn-xs btn-primary" id="ayuda_tiempo_sueño" data-toggle="tooltip" data-placement="left" title="Tiempo de sueño consiste en las horas que a dormido en la casa"><span class="glyphicon glyphicon-info-sign"></span></button>
+							<label style='color:red;'>*</label> <label>Tiempo de Sueño Efectivo = </label> <input type='text' name='sueño_efectivo_previo' id="sueño_efectivo_previo" onkeypress="return justNumbers(event);" onchange="horas_permitidas_sueño();" onKeyup="verificar_estado(this.form.enviar_evaluacion)"><br>
+							<button type="button" class="btn btn-xs btn-primary" id="ayuda_tiempo_descanso" data-toggle="tooltip" data-placement="left" title="Tiempo descanso es durante su jornada laboral Ejemplo = Alistamiento del vehiculo , almorzando ,comprando la tasa de uso "><span class="glyphicon glyphicon-info-sign"></span></button>
+							<label style='color:red;'>*</label> <label>Tiempo de Descanso = </label> <input type='text' name='tiempo_descanso' id='tiempo_descanso' onkeypress="return justNumbers(event);" onchange="horas_permitidas_descanso();" onKeyup="verificar_estado(this.form.enviar_evaluacion)"><br>
+							
+							<hr>
+							
+							<div class="seleccion_google_fit">
+								<button type="button" class="btn btn-xs btn-primary" id="ayuda_xiaomi" data-toggle="tooltip" data-placement="left" title="Conecte el Bluetooth del equipo para que pueda sincronizar la informacion de la manilla a la pagina , si no se conecta agrege la informacion manualmente"><span class="glyphicon glyphicon-info-sign"></span></button>
+								<input type="checkbox" name="google_fit" id="fit"  onclick="mostrar_contenedor_google_fit();">
+								<label for="fit"> Cargar Informacion Manilla</label>
+							</div>
+
+							<div id="contenedor_datos_google_fit" style="display: none;">
+								<button type="button" class="btn btn-xs btn-primary" id="ayuda_sueño_profundo" data-toggle="tooltip" data-placement="left" title="El sueño profundo se llena Asi = Priemro se colocar la hora seguido de la letra h , luego se coloca el valor de los minutos seguido de la letra min. Pero si no hay horas se coloca solo el valor de los minutos seguido de la palabra min"><span class="glyphicon glyphicon-info-sign"></span></button>
+								<label>Sueño Profundo = </label> <input type="text" id="sueño_profundo" name="sueño_profundo" placeholder="1 h 10 min / 10 min"><br>
+								<button type="button" class="btn btn-xs btn-primary" id="ayuda_pulsaciones" data-toggle="tooltip" data-placement="left" title="el valor de Pulsaciones se coloca en el formato 60/80 sin niguna letra o palabra"><span class="glyphicon glyphicon-info-sign"></span></button>
+								<label>Valor Pulsaciones = </label> <input type="text" name="pulsaciones" placeholder="60/80"><br><br>
+							</div>
+							
+							<hr>
+							<label>Acompañante = </label> <input type='text' name='copiloto' onkeypress="return soloLetras(event)">
+							<label>Origen del Acompañante = </label> <input type='text' name='origen_copiloto' onkeypress="return soloLetras(event)">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-1.12.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

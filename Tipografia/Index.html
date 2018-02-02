@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tipografia</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<!--con la clase small se le coloca estilos a un h1 utilizando un span 
+		o utilizando la etiqute small directamente se coloca la clase
+		solo para etiquetas h o header -->
+		<h1 class="text-muted">Header en h1 <span class="small">Texto secundario</span></h1>
+		<h2 class="text-primary">Header en h2 <small>Texto Secundario</small></h2>
+		<h3 class="text-success">Header en h3 <small>Texto Secundario</small></h3>
+		<h4 class="text-info">header en h4 <small>Texto Secundario</small></h4>
+		<h5 class="text-warning">Header en h5 <small>Texto Secundario</small></h5>
+		<h6 class="text-danger">Header en h6 <small>Texto Secundario</small></h6>
+		<br><br>
+		<h1 class="bg-primary">Header en h1 <span class="small">Texto secundario</span></h1>
+		<h2 class="bg-success">Header en h2 <small>Texto Secundario</small></h2>
+		<h3 class="bg-info">Header en h3 <small>Texto Secundario</small></h3>
+		<h4 class="bg-warning">header en h4 <small>Texto Secundario</small></h4>
+		<h5 class="bg-danger">Header en h5 <small>Texto Secundario</small></h5>
+		<br><br>
+		<div class="row">
+		<!--Clase lead= para resaltar una parte del parrafo
+					text-left= Que se alinie a la izquierda
+					text-center = que se alinie al centro
+					text-justify = Para justidicar el parrafo
+					text-lowercase = Para hacer letras minusculas
+					text-uppercase = Para hacer letras en mayuscula	
+					text-capitalize = Hace que la primera letras este en mayuscula
+					blockquote-reverse = Coloca un aliniado a la derecha en el  contenido de la etiqueta blockquote
+					text-muted,text-primary,text-success,text-info,text-warningtext-danger= Es para cambiarle el color al texto
+					bg-info* = para cambiar el coloor de fondo
+				-->
+				<!--Etiquta mark= para resaltar
+				    del o s= Para tachar un texto
+				    ins o u= Para colocarle un subrayado a un texto
+				    strong o b = Para negrita
+				    em = Letra en tipo Italicas
+				    blockquote = Para hacer referencia a una sita o una palabra celebre
+				    cite = Para colocar la fuente
+				    code = Encierra el texto como si fuera codigo o algo relevante
+				    pre = Para tener un bloque de codigo en el texto class="text-"
+
+
+				    -->
+			<div class="col-md-4 text-left">
+				<p class="lead text-lowercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+				<p class=""><mark>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</mark></p>
+				<p class=""><del>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</del></p>
+				<p><s>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</s></p>
+				<p class=""><ins>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</ins></p>
+				<p class=""><u>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</u></p>
+			</div>
+			<div class="col-md-4 text-center">
+				<p class="small text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+				<p class=""><strong>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</strong></p>
+				<p class=""><b>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</b></p>
+				<p class=""><em>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+				<p class="">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				<p class="">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+			</div>
+			<div class="col-md-4 text-right text-capitalize">
+				<p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+				<p class=""><code>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</code></p>
+				<p><pre>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</pre></p>
+				<p class="">proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				<p class="">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+			</div>
+		</div>
+		<div class="row">
+			<blockquote class="blockquote-reverse">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<footer>Andrés Carreño <cite title="fuente"> En fuente</cite></footer>
+			</blockquote>
+		</div>
+	</div>
+
+	<script src="bootstrap.min.js"></script>
+	<script src="js/Jquery-1.12.3.js"></script>	
+</body>
+</html>

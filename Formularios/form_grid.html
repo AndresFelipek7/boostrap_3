@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>formulario utlizando Columnas</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="bootstrap.min.js"></script>
+	<script src="Jquery-1.12.3.js"></script>
+</head>
+<body>
+<!--Clase control label= Para centrar el label verticalmente y poder utilizar columnas en el label
+	form-horizontal = Nos sirve para poder trabajar en un formulario con columnas
+	col-md-offset-2 = Para que se corra 2 columnas a la derecha de su posicion 
+	form-control-static = deja el elemento centrado y estatico en su posicion
+	etiqueta fielsat = nos permite con el atributo disable desactivar todos los elementos que contiene-->
+	<div class="container">
+		<br>
+		<form action="" class="form-horizontal">
+			<fieldset>
+				<div class="form-group has-success">
+					<label for="" class="control-label col-md-2">Nombre:</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" placeholder="Nombre:">
+					</div>
+				</div>
+
+				<div class="form-group has-warning">
+					<label class="control-label col-md-2">Nombre:</label>
+					<div class="col-md-10">
+						<p class="form-control-static">Carlos Arturo Esparza</p>
+					</div>
+				</div>
+
+				<div class="form-group has-error">
+					<label for="" class="control-label col-md-2">Correo:</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" placeholder="Correo">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="checkbox col-md-2 col-md-offset-2">
+						<label>
+							<input type="checkbox">Recuerdame</input>
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-2 col-md-offset-2">
+						<button class="btn btn-primary">Enviar</button>
+					</div>
+				</div>
+			</form>
+			</fieldset>
+	</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Principa</title>
+	<!--Para que se adapta a cualquier tamaño de pantalla-->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<header>
+		<!--Clase container de boostrap para centrar el div-->
+		<div class="container">
+			<h1>Header</h1>
+		</div>
+	</header>
+	<!--Para poder utilizar el grid necesita que este en un contenedor como el div-->
+	<!--Con la clase container-fluid lo centra y abarca toda la pantalla-->
+	<div class="container-fluid">
+		<!--Clase row crea una fila-->
+		<section class="main row">
+			<!--Se coloca en el contenedor para que acepte el grid de boostrap-->
+			<!--md significa de tamaño mediano y 9 columnas-->
+			<!--Tipos de columnas en boostrap
+			col xs(Extrasmaill) = para celulares
+			col sm(small) = para celulares con mayor pantalla
+			col-md(medianum) =   para tabletas y en formato horizontal
+			col lg(large) = para computadores de escritorio
+			La fila siempre tiene que sumar 12 dependiente de la cantidad de elementos qu lo componen
+			-->
+		  	<article class=" col-xs-12 col-sm-8 col-md-9">
+		  		<h3>Article</h3>
+		  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facere laudantium nemo amet maxime aliquam cupiditate expedita, illo. Accusamus, sed dolor eos ratione et nihil magnam consequuntur iusto maiores numquam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facere laudantium nemo amet maxime aliquam cupiditate expedita, illo. Accusamus, sed dolor eos ratione et nihil magnam consequuntur iusto maiores numquam!
+		  		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facere laudantium nemo amet maxime aliquam cupiditate expedita, illo. Accusamus, sed dolor eos ratione et nihil magnam consequuntur iusto maiores numquam!
+		  		<a href="#" class="btn btn-primary visible-lg-inline visible-md-block">Boton</a>
+		  		</p>
+		  	</article>
+		  	<!--Renponsive utilities:
+		  		visible-md o lg = Es para que sea visible en estos dos tipos de pantalla
+		  		hidden-sm o xs = Para ocultar el elemento cuando llegue al tamaño
+		  		visible-md-inline = Se coloca inline para que aparezca en linea y no en 					bloque por defecto
+		  		hidden-print = Para ocultar elementos que no aparezcan cuando se imprimi
+		  		
+		  		-->
+		  	<aside class="col-xs-12 col-sm-4 col-md-3">
+		  		<h3>Sidebar-Aside</h3>
+		  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus harum, est fuga veritatis esse dignissimos optio sunt obcaecati sit quos. Maiores tempora harum, fugit voluptates nihil vel accusantium doloribus perspiciatis.
+		  		</p>
+		  	</aside>  	
+	    </section>  		
+		<!--Dentro de la clase row debe de haber columnas-->
+		<div class="row">
+		<!--El numero de columnas de extrapequeño(xs) y pequeño(sm) se relacionan es decir si no la encuentra va ha tomar e valor de la anterior, asi sucede con mediano(md) y largo(lg)-->
+		<div class="color1 col-xs-12 col-sm-6 col-md-3">
+			<p>
+			<h3>Columna 1</h3>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<h3>Columna 2</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+			<!--Clase clearfixed visible-sm-block hace referencia cuando hay un error del tamaño de las columnas para que aparezca en su sutio en este caso esta afectando al tamaño pequeño(sm) cuando pasa de mediano a paqueño para que tenga su forma que le dimos en la parte superior-->
+
+			<!-- <div class="clearfix visible-sm-block"></div> -->
+		<!--col-md-offset-2 la clase offset nos desplaza a la derecha 3 columnas si no encuentre otro elemento a la derecha-->	
+		<div class="color1 col-xs-12 col-sm-6 col-md-3">
+			<h3>Columna 3</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<h3>Columna 4</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<h1>Andrés Carreño</h1>
+		</div>
+	</footer>
+	<script src="bootstrap.min.js"></script>
+	<script src="jquery-1.12.3.js"></script>
+</body>
+</html>
